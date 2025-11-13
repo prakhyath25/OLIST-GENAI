@@ -18,3 +18,5 @@ vectors.faiss
 meta.pkl
 # Secrets
 secrets.json
+.venv/
+
