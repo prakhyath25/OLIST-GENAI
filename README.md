@@ -115,51 +115,15 @@ After executing analytics, the LLM is used only to summarize and explain
 This eliminates hallucination.
 
 🏗️ Architecture
-                🧑‍💼 User Query
-                       │
-                       ▼
-            ┌────────────────────┐
-            │  NL → JSON Parser  │  ← OpenRouter (LLM)
-            └────────────────────┘
-                       │
-       ┌───────────────┴────────────────┐
-       │                                │
-       ▼                                ▼
-┌─────────────────┐             ┌────────────────┐
-│ Deterministic   │             │ FAISS Retriever│
-│ Analytics Engine│             └────────────────┘
-└─────────────────┘                     │
-       │                                │
-       └───────────────┬────────────────┘
-                       ▼
-              Final Answer Builder
-                       │
-                       ▼
-         🧠 LLM Explanation (Human-like)
-                       │
-                       ▼
-                📤 Streamlit UI
+                
+<img width="477" height="475" alt="image" src="https://github.com/user-attachments/assets/10a9573d-2f9e-47d8-8167-a606ebf77ea5" />
 
-📁 Project Structure
-📦 olist-genai
- ┣ 📁 data/
- ┃ ┣ olist_orders_dataset.csv
- ┃ ┣ olist_order_items_dataset.csv
- ┃ ┣ olist_customers_dataset.csv
- ┃ ┣ olist_products_dataset.csv
- ┃ ┣ ... (Olist datasets)
- ┣ 📁 src/
- ┃ ┣ app.py                 # Streamlit app
- ┃ ┣ analytics.py           # Deterministic engine
- ┃ ┣ nl_to_query.py         # LLM + rule-based parser
- ┃ ┣ retrieval.py           # FAISS search
- ┃ ┣ embed_index.py         # Embedding generation
- ┣ meta.pkl
- ┣ vectors.faiss
- ┣ requirements.txt
- ┗ README.md
+  Project Structure
+<img width="477" height="383" alt="image" src="https://github.com/user-attachments/assets/17b8c035-3acc-42d6-8311-ed5f254a92b2" />
+
 
 ⚙️ Setup & Installation
+
 1️⃣ Clone the repo
 git clone https://github.com/yourusername/olist-genai.git
 cd olist-genai
