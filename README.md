@@ -23,11 +23,6 @@ Apply time-aware logic like “past 2 quarters”
 Retrieve supporting evidence rows using semantic search
 
 Prevent hallucinations by grounding all answers in data
-
-This project was built for the
-📌 GDA Corp AI/ML Campus Hiring Assignment
-and showcases a practical GenAI solution for real analytics use cases.
-
 🧠 Key Features
 🔥 1. Hybrid Agent Architecture (RAG + Analytics Engine)
 
